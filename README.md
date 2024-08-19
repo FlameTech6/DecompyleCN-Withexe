@@ -1,3 +1,5 @@
+本仓库提供了 Decompyle++ 项目的编译版本，包含了 pycdc.exe 与 pycdas.exe 这两个可执行文件。
+
 # Pycdc的简介(译自pycdc官方仓库地址)
 
 ## Decompyle++
