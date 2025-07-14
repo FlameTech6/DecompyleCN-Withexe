@@ -4,6 +4,10 @@
 
 ---
 
+# 以下内容译自 pycdc 项目官方仓库，有少量删减与修改
+
+---
+
 # Decompyle++ 简介
 **Python 字节码的反汇编器/反编译器**  
 
@@ -34,6 +38,17 @@ Decompyle++ 是一个将Python字节码(.pyc)文件转换回可读Python源代�
 这两种工具都支持 Python marshalled 代码对象，输出自`marshal.dumps(compile(...))`.
 
 要使用此功能，请指定`-c -v <version>`必须指定版本，因为对象本身不包含版本元数据
+
+---
+
+# 命令行参数说明
+## pycdc
+| 选项 | 参数 | 适用工具 | 说明 | 必需条件 | 示例 |
+|------|------|----------|------|----------|------|
+| `-h`<br>`--help` | 无 | pycdas/pycdc | 显示帮助信息 | 可选 | `./pycdc -h` |
+| `-v` | `<x.y>` | pycdas/pycdc | 指定Python版本 | 使用`-c`时必需 | `./pycdc -v 3.8` |
+| `-c` | 无 | pycdas/pycdc | 处理序列化代码对象 | 需配合`-v`使用 | `./pycdc -c -v 2.7` |
+| `-o` | `<文件路径>` | pycdas/pycdc | 指定输出文件 | 可选 | `./pycdc -o output.py` |
 
 ---
 
