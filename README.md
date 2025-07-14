@@ -1,26 +1,52 @@
-本仓库提供了 Decompyle++ 项目的汉化编译版本，包含了 pycdc.exe 与 pycdas.exe 这两个可执行文件。
+本仓库提供了 Decompyle++ (pycdc) 项目的汉化编译版本，包含了 pycdc.exe 与 pycdas.exe 这两个可执行文件，目前仅包含了 Windows x64 平台的构建
 
-# Pycdc的简介(译自pycdc官方仓库地址)
+汉化工作者及编译人员：@FlameTech6
 
-## Decompyle++
-***Python 字节码反汇编器/反编译器***
+---
 
-Decompyle++ 旨在将编译后的 Python 二进制码转换回有效的二进制码的和人类可读的Python源代码。
+# Decompyle++ 简介
+**Python 字节码的反汇编器/反编译器**  
 
-虽然其他项目已经实现了这些功能，而与之不同的是，Decompyle++ 是独一无二的，因为它追求于支持来自任何版本 Python 的二进制码。
+Decompyle++ 是一个将Python字节码(.pyc)文件转换回可读Python源代码的工具，支持从Python 2.4到最新版本的所有字节码格式
 
-Decompyle++ 包括二进制码反编译器（pycda）和 反编译器（pycdc）。
+## 功能组件
+- `pycdas`: Python字节码反汇编器
+- `pycdc`: Python字节码反编译器
 
-顾名思义，Decompyle++ 是用 C++ 编写的。 如果您想做出贡献，请在 github 上 Fork 我们，项目网址为 https://github.com/zrax/pycdc
+## 依赖要求
+- CMake 3.12+
+- C++17兼容编译器
+- Python 3.x (仅测试需要)
 
-### 用法
-要运行 pycdas (PYC反汇编器)： `./pycdas [ PYC 文件的路径 ]`
-二进制码的反汇编结果将会被打印到标准输出。
+---
 
-要运行 pycdc (PYC反编译器)： `./pycdc [ PYC 文件的路径 ]`
-将反编译的 Python 源代码将会被打印到标准输出。 任何错误都会打印到标准程序。
+# 使用方法
+**运行 pycdas**，PYC 反汇编器：
+`./pycdas [PATH TO PYC FILE]`
+字节码反汇编结果将打印到 stdout
 
-编组代码对象： `marshal.dumps(compile(...))`.
-这两种工具都支持 Python 编组的代码对象，作为 的输出。
+**运行 pycdc**，PYC 编译器：
+`./pycdc [PATH TO PYC FILE]`
+反编译后的 Python 源代码会打印到 stdout
+任何错误都会打印到 stderr
 
-要使用此功能，请在命令行上指定 `-c -v <version>` -必须指定版本，因为对象本身不包含版本元数据。
+**标记代码对象**：
+这两种工具都支持 Python marshalled 代码对象，输出自`marshal.dumps(compile(...))`.
+
+要使用此功能，请指定`-c -v <version>`必须指定版本，因为对象本身不包含版本元数据
+
+---
+
+# 作者、许可证、署名
+##核心开发者
+* Michael Hansen 
+* Darryl Pogue
+
+##其他贡献者：
+* charlietang98
+* Kunal Parmar
+* Olivier Iffrig
+* Zlodiy
+
+它根据 GNU 通用公共许可证第 3 版的条款发布；
+详情请查看 LICENSE 文件
