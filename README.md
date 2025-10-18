@@ -1,3 +1,7 @@
+本仓库已弃用，请移步新仓库 https://github.com/FTech6/pycdc-CN-with-build/
+
+---
+
 本仓库提供了 Decompyle++ (pycdc) 项目的汉化编译版本，包含了 pycdc.exe 与 pycdas.exe 这两个可执行文件，目前仅包含了 Windows x64 平台的构建
 
 汉化工作者及编译人员：@FlameTech6
