@@ -1,4 +1,4 @@
-本仓库已弃用，请移步新仓库 https://github.com/FTech6/pycdc-CN-with-build/
+# 本仓库已弃用，请移步新仓库 https://github.com/FTech6/pycdc-CN-with-build/
 
 ---
 
